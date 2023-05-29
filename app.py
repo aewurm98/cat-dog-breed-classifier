@@ -13,7 +13,16 @@ import gradio as gr
 learn_inf = load_learner('export2.pkl')
 
 # %% ../dog-breeds.ipynb 15
-categories = dls.vocab
+categories = ['Abyssinian', 'Bengal', 'Birman', 'Bombay', 'British_Shorthair', 
+              'Egyptian_Mau', 'Maine_Coon', 'Persian', 'Ragdoll', 'Russian_Blue', 
+              'Siamese', 'Sphynx', 'american_bulldog', 'american_pit_bull_terrier', 
+              'basset_hound', 'beagle', 'boxer', 'chihuahua', 'english_cocker_spaniel', 
+              'english_setter', 'german_shorthaired', 'great_pyrenees', 'havanese', 
+              'japanese_chin', 'keeshond', 'leonberger', 'miniature_pinscher', 
+              'newfoundland', 'pomeranian', 'pug', 'saint_bernard', 'samoyed', 
+              'scottish_terrier', 'shiba_inu', 'staffordshire_bull_terrier', 
+              'wheaten_terrier', 'yorkshire_terrier']
+
 
 def classify_image(img):
     pred, idx, probs = learn_inf.predict(img)
