@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://aewurm98:$HF_TOKEN@huggingface.co/spaces/aewurm98/Cats_vs_Dogs_Classifier main
+        run: git push https://aewurm98:$HF_TOKEN@huggingface.co/spaces/aewurm98/cat-dog-breed-classifier main
